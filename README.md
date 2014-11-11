@@ -3,7 +3,8 @@ StoreKeeper
 
 Inventory management with loans
 
-Prerequires :
+Prerequires
+---
 - PHP5
     With timezone in your php.ini ! (date.timezone = UTC)
 - Mysql server
@@ -26,6 +27,7 @@ php app/console doctrine:fixtures:load -n
 ```
 
 Note for developpers:
+---
 
 - Generate class for doctrine (this is not a replace of class but adding missing fields)
 ```
