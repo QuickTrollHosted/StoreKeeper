@@ -2,4 +2,5 @@
 Symfony2 is great: J'aime Symfony2
 Hello: Bonjour
 Coucou: Bonjour
-View part %name%: Visualiser la pièce %name%
+View part %id%: Visualiser la pièce %id%
+Homepage: Accueil

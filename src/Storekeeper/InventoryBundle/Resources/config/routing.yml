@@ -3,5 +3,5 @@ homepage:
     defaults: { _controller: StorekeeperInventoryBundle:Default:index }
 
 part_view:
-    path:     /part/view/{name}
+    path:     /part/view/{id}
     defaults: { _controller: StorekeeperInventoryBundle:Part:view }

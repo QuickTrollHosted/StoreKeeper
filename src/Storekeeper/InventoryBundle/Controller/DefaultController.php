@@ -9,13 +9,11 @@ use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends Controller
 {
-    public function indexAction($name)
+    public function indexAction()
     {
-        //echo $this->get('session')->getLocale();
-        
-        $vars = array('name' => $name);
+        $vars = array('name' => 'test');
         //$translator->trans('Symfony is great!');
-        $t = $this->get('translator')->trans('Symfony2 is great');
+        //$t = $this->get('translator')->trans('Symfony2 is great');
         //debug($t);
         //$t = $this->get('translator')->trans('Hello %name%', array('%name%' = > $name));
         return $this->render('StorekeeperInventoryBundle:Default:index.html.twig', $vars);

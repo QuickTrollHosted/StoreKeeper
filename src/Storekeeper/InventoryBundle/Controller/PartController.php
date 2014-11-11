@@ -4,19 +4,16 @@ namespace Storekeeper\InventoryBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-//Added bu Fanch
-use Symfony\Component\HttpFoundation\Response;
-
 class PartController extends Controller
 {
-    public function viewAction($name)
+    public function viewAction($id)
     {
         //Charger l'objet et retourner dans twig
         $part = $this->getDoctrine()
         ->getRepository('StorekeeperInventoryBundle:Part')
-        ->find($name);
+        ->find($id);
         
-        $vars = array('name' => $name);
+        $vars = array('id' => $id);
         return $this->render('StorekeeperInventoryBundle:Part:view.html.twig', $vars);
     }
 }
