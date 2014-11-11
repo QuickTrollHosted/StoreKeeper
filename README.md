@@ -18,10 +18,10 @@ Installing dependancings
 
 Creating database and populate, run
 ------------------------------------
+$ php app/console doctrine:generate:entities Storekeeper
 $ php app/console doctrine:database:create
-$ php app/console doctrine:schema:update --dump-sql
 $ php app/console doctrine:schema:update --force
-$ php app/console doctrine:fixtures:load
+$ php app/console doctrine:fixtures:load -n
 
 
 Note for developpers:

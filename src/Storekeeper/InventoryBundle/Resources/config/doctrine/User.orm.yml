@@ -18,9 +18,11 @@ Storekeeper\InventoryBundle\Entity\User:
         auth:
             type: string
             length: '15'
+            default: 'local'
         firstname:
             type: string
             length: '63'
+            nullable: true
         lastname:
             type: string
             length: '63'

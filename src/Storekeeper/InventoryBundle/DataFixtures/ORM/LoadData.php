@@ -31,39 +31,30 @@ class LoadData implements FixtureInterface
         $userAdmin->setLogin('admin');
         $userAdmin->setPassword('test');
         $userAdmin->setAuth('local');
-        $userAdmin->setFirstname('administrateur');
-        $userAdmin->setLastname('');
+        $userAdmin->setLastname('administrateur');
         $userAdmin->setMail('admin@localhost');
         $manager->persist($userAdmin);
         
-        //Creating default category
-        $categroy1 = new Category();
-        $categroy1->setName('Default');
-        $categroy1->setCategoryId(null);
-        $categroy1->setDescription('Default category');
-        $categroy1->setHasPicture(false);     
-        $manager->persist($categroy1);
+        //Creating root category
+        $categroyRoot = new Category();
+        $categroyRoot->setName('ROOT');
+        $categroyRoot->setDescription('This is the ROOT category');
+        $categroyRoot->setHasPicture(false);     
+        $manager->persist($categroyRoot);
         
         //Creation contact default
-        $contact1 = new Contact();
-        $contact1->setAddress1('');
-        $contact1->setAddress2('');
-        $contact1->setCity('');
-        $contact1->setCompany('Default company');
-        $contact1->setCountry('France');
-        $contact1->setFax('');
-        $contact1->setFirstname('');
-        $contact1->setLastname('Administrator');
-        $contact1->setMail('admin@localhost');
-        $contact1->setMobile('');
-        $contact1->setPhone('');
-        $contact1->setPostcode('');
-        $contact1->setService('');
-        $contact1->setStandard('');
-        $contact1->setState('');
-        $contact1->setTitle('');
-        $manager->persist($contact1);
+        $contactDefault = new Contact();
+        $contactDefault->setCompany('Default company');
+        $contactDefault->setCountry('France');
+        $contactDefault->setLastname('Administrator');
+        $contactDefault->setMail('admin@localhost');
+        $manager->persist($contactDefault);
         
+        $warehouseDefault = new Warehouse();
+        $warehouseDefault->setContact($contactDefault);
+        $warehouseDefault->setDescription('This is the default warehouse');
+        $warehouseDefault->setName('Default warehouse');
+        $manager->persist($warehouseDefault);
         
         $manager->flush();
     }

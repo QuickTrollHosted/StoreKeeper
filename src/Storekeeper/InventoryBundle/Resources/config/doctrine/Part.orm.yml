@@ -9,10 +9,6 @@ Storekeeper\InventoryBundle\Entity\Part:
             generator:
                 strategy: AUTO
     fields:
-        partId:
-            type: integer
-            column: part_id
-            nullable: true
         isChildIndivisible:
             type: boolean
         warehouse_Id:
@@ -33,4 +29,11 @@ Storekeeper\InventoryBundle\Entity\Part:
             length: 255
         hasPicture:
             type: boolean
+    manyToOne:
+        category:
+            targetEntity: Category
+            inversedBy: parts
+            joinColumn:
+                name: category_id
+                referencedColumnName: id
     lifecycleCallbacks: {  }

@@ -9,9 +9,6 @@ Storekeeper\InventoryBundle\Entity\Warehouse:
             generator:
                 strategy: AUTO
     fields:
-        contact_Id:
-            type: integer
-            column: contact_Id
         name:
             type: string
             length: 255
@@ -21,4 +18,12 @@ Storekeeper\InventoryBundle\Entity\Warehouse:
         gps:
             type: string
             length: 255
+            nullable: true
+    manyToOne:
+        contact:
+            targetEntity: Contact
+            inversedBy: warehouses
+            joinColumn:
+                name: contact_id
+                referencedColumnName: id
     lifecycleCallbacks: {  }

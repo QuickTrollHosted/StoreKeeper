@@ -9,10 +9,6 @@ Storekeeper\InventoryBundle\Entity\Category:
             generator:
                 strategy: AUTO
     fields:
-        categoryId:
-            type: integer
-            column: category_id
-            nullable: true
         name:
             type: string
             length: '63'
@@ -21,4 +17,11 @@ Storekeeper\InventoryBundle\Entity\Category:
             length: 255
         hasPicture:
             type: boolean
+    manyToOne:
+        category:
+            targetEntity: Category
+            inversedBy: categories
+            joinColumn:
+                name: category_id
+                referencedColumnName: id
     lifecycleCallbacks: {  }

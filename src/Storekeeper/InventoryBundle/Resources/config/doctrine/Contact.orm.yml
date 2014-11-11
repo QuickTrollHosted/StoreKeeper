@@ -12,49 +12,64 @@ Storekeeper\InventoryBundle\Entity\Contact:
         company:
             type: string
             length: 63
+            nullable: true
         service:
             type: string
             length: 63
+            nullable: true
         title:
             type: string
             length: 7
+            nullable: true
         firstname:
             type: string
             length: 31
+            nullable: true
         lastname:
             type: string
             length: 31
         phone:
             type: string
             length: 31
+            nullable: true
         mobile:
             type: string
             length: 31
+            nullable: true
         standard:
             type: string
             length: 31
+            nullable: true
         fax:
             type: string
             length: 31
+            nullable: true
         mail:
             type: string
             length: 255
+            nullable: true
         address1:
             type: string
             length: 255
+            nullable: true
         address2:
             type: string
             length: 127
+            nullable: true
         postcode:
             type: string
             length: 6
+            nullable: true
         city:
             type: string
             length: 63
+            nullable: true
         state:
             type: string
             length: 63
+            nullable: true
         country:
             type: string
             length: 63
+            nullable: true
     lifecycleCallbacks: {  }

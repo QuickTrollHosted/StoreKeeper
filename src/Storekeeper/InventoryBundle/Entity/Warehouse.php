@@ -136,4 +136,32 @@ class Warehouse
     {
         return $this->gps;
     }
+    /**
+     * @var \Storekeeper\InventoryBundle\Entity\Contact
+     */
+    private $contact;
+
+
+    /**
+     * Set contact
+     *
+     * @param \Storekeeper\InventoryBundle\Entity\Contact $contact
+     * @return Warehouse
+     */
+    public function setContact(\Storekeeper\InventoryBundle\Entity\Contact $contact = null)
+    {
+        $this->contact = $contact;
+
+        return $this;
+    }
+
+    /**
+     * Get contact
+     *
+     * @return \Storekeeper\InventoryBundle\Entity\Contact 
+     */
+    public function getContact()
+    {
+        return $this->contact;
+    }
 }

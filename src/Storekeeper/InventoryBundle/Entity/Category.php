@@ -24,10 +24,6 @@ class Category
     {
         return $this->id;
     }
-    /**
-     * @var integer
-     */
-    private $categoryId;
 
     /**
      * @var string
@@ -43,30 +39,6 @@ class Category
      * @var boolean
      */
     private $hasPicture;
-
-
-    /**
-     * Set categoryId
-     *
-     * @param integer $categoryId
-     * @return Category
-     */
-    public function setCategoryId($categoryId)
-    {
-        $this->categoryId = $categoryId;
-
-        return $this;
-    }
-
-    /**
-     * Get categoryId
-     *
-     * @return integer 
-     */
-    public function getCategoryId()
-    {
-        return $this->categoryId;
-    }
 
     /**
      * Set name
@@ -135,5 +107,33 @@ class Category
     public function getHasPicture()
     {
         return $this->hasPicture;
+    }
+    /**
+     * @var \Storekeeper\InventoryBundle\Entity\Category
+     */
+    private $category;
+
+
+    /**
+     * Set category
+     *
+     * @param \Storekeeper\InventoryBundle\Entity\Category $category
+     * @return Category
+     */
+    public function setCategory(\Storekeeper\InventoryBundle\Entity\Category $category = null)
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+
+    /**
+     * Get category
+     *
+     * @return \Storekeeper\InventoryBundle\Entity\Category 
+     */
+    public function getCategory()
+    {
+        return $this->category;
     }
 }

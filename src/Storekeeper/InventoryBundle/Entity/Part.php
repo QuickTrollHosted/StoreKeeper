@@ -24,10 +24,6 @@ class Part
     {
         return $this->id;
     }
-    /**
-     * @var integer
-     */
-    private $partId;
 
     /**
      * @var boolean
@@ -64,29 +60,6 @@ class Part
      */
     private $hasPicture;
 
-
-    /**
-     * Set partId
-     *
-     * @param integer $partId
-     * @return Part
-     */
-    public function setPartId($partId)
-    {
-        $this->partId = $partId;
-
-        return $this;
-    }
-
-    /**
-     * Get partId
-     *
-     * @return integer 
-     */
-    public function getPartId()
-    {
-        return $this->partId;
-    }
 
     /**
      * Set isChildIndivisible
@@ -247,5 +220,34 @@ class Part
     public function getHasPicture()
     {
         return $this->hasPicture;
+    }
+ 
+    /**
+     * @var \Storekeeper\InventoryBundle\Entity\Category
+     */
+    private $category;
+
+
+    /**
+     * Set category
+     *
+     * @param \Storekeeper\InventoryBundle\Entity\Category $category
+     * @return Part
+     */
+    public function setCategory(\Storekeeper\InventoryBundle\Entity\Category $category = null)
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+
+    /**
+     * Get category
+     *
+     * @return \Storekeeper\InventoryBundle\Entity\Category 
+     */
+    public function getCategory()
+    {
+        return $this->category;
     }
 }
