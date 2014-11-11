@@ -1,23 +1,33 @@
 <?php
 
-namespace Storekeeper\InventoryBundle\Entity\Inventory;
+namespace Storekeeper\InventoryBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Class
+ * Category
  */
-class Classification
+class Category
 {
     /**
      * @var integer
      */
     private $id;
 
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
     /**
      * @var integer
      */
-    private $classificationId;
+    private $categoryId;
 
     /**
      * @var string
@@ -34,50 +44,35 @@ class Classification
      */
     private $hasPicture;
 
-    /**
-     * @var string
-     */
-    private $type;
-
 
     /**
-     * Get id
+     * Set categoryId
      *
-     * @return integer 
+     * @param integer $categoryId
+     * @return Category
      */
-    public function getId()
+    public function setCategoryId($categoryId)
     {
-        return $this->id;
-    }
-
-    /**
-     * Set classId
-     *
-     * @param integer $classId
-     * @return Class
-     */
-    public function setClassificationId($classificationId)
-    {
-        $this->classificationId = $classificationId;
+        $this->categoryId = $categoryId;
 
         return $this;
     }
 
     /**
-     * Get classId
+     * Get categoryId
      *
      * @return integer 
      */
-    public function getClassificationId()
+    public function getCategoryId()
     {
-        return $this->classificationId;
+        return $this->categoryId;
     }
 
     /**
      * Set name
      *
      * @param string $name
-     * @return Class
+     * @return Category
      */
     public function setName($name)
     {
@@ -100,7 +95,7 @@ class Classification
      * Set description
      *
      * @param string $description
-     * @return Class
+     * @return Category
      */
     public function setDescription($description)
     {
@@ -123,7 +118,7 @@ class Classification
      * Set hasPicture
      *
      * @param boolean $hasPicture
-     * @return Class
+     * @return Category
      */
     public function setHasPicture($hasPicture)
     {
@@ -140,56 +135,5 @@ class Classification
     public function getHasPicture()
     {
         return $this->hasPicture;
-    }
-
-    /**
-     * Set type
-     *
-     * @param string $type
-     * @return Class
-     */
-    public function setType($type)
-    {
-        $this->type = $type;
-
-        return $this;
-    }
-
-    /**
-     * Get type
-     *
-     * @return string 
-     */
-    public function getType()
-    {
-        return $this->type;
-    }
-    /**
-     * @var integer
-     */
-    private $classId;
-
-
-    /**
-     * Set classId
-     *
-     * @param integer $classId
-     * @return Classification
-     */
-    public function setClassId($classId)
-    {
-        $this->classId = $classId;
-
-        return $this;
-    }
-
-    /**
-     * Get classId
-     *
-     * @return integer 
-     */
-    public function getClassId()
-    {
-        return $this->classId;
     }
 }

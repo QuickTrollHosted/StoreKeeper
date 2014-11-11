@@ -1,7 +1,7 @@
-Storekeeper\InventoryBundle\Entity\Inventory\User:
+Storekeeper\InventoryBundle\Entity\User:
     type: entity
     table: null
-    repositoryClass: Storekeeper\InventoryBundle\Entity\Inventory\UserRepository
+    repositoryClass: Storekeeper\InventoryBundle\Entity\UserRepository
     id:
         id:
             type: integer

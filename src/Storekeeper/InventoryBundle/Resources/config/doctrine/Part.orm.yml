@@ -1,0 +1,34 @@
+Storekeeper\InventoryBundle\Entity\Part:
+    type: entity
+    table: null
+    repositoryClass: Storekeeper\InventoryBundle\Entity\PartRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        partId:
+            type: integer
+            column: part_id
+        isChildIndivisible:
+            type: boolean
+        warehouse_Id:
+            type: integer
+            column: warehouse_Id
+        categoryId:
+            type: integer
+            column: category_id
+        barecode:
+            type: string
+            length: '127'
+        name:
+            type: string
+            length: '63'
+        description:
+            type: string
+            length: 255
+        hasPicture:
+            type: boolean
+    lifecycleCallbacks: {  }

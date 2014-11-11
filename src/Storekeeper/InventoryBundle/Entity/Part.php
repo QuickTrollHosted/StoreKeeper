@@ -1,6 +1,6 @@
 <?php
 
-namespace Storekeeper\InventoryBundle\Entity\Inventory;
+namespace Storekeeper\InventoryBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -16,7 +16,7 @@ class Part
 
 
     /**
-     * Get ids
+     * Get id
      *
      * @return integer 
      */
@@ -33,6 +33,11 @@ class Part
      * @var boolean
      */
     private $isChildIndivisible;
+
+    /**
+     * @var integer
+     */
+    private $warehouse_Id;
 
     /**
      * @var integer
@@ -56,14 +61,9 @@ class Part
 
     /**
      * @var boolean
-     * Define if sthere are a picture
      */
     private $hasPicture;
-    
-    /**
-     * @var integer
-     */
-    private $warehouse_Id;
+
 
     /**
      * Set partId
@@ -109,6 +109,29 @@ class Part
     public function getIsChildIndivisible()
     {
         return $this->isChildIndivisible;
+    }
+
+    /**
+     * Set warehouse_Id
+     *
+     * @param integer $warehouseId
+     * @return Part
+     */
+    public function setWarehouseId($warehouseId)
+    {
+        $this->warehouse_Id = $warehouseId;
+
+        return $this;
+    }
+
+    /**
+     * Get warehouse_Id
+     *
+     * @return integer 
+     */
+    public function getWarehouseId()
+    {
+        return $this->warehouse_Id;
     }
 
     /**
@@ -224,29 +247,5 @@ class Part
     public function getHasPicture()
     {
         return $this->hasPicture;
-    }
-
-
-    /**
-     * Set warehouse_Id
-     *
-     * @param integer $warehouseId
-     * @return Part
-     */
-    public function setWarehouseId($warehouseId)
-    {
-        $this->warehouse_Id = $warehouseId;
-
-        return $this;
-    }
-
-    /**
-     * Get warehouse_Id
-     *
-     * @return integer 
-     */
-    public function getWarehouseId()
-    {
-        return $this->warehouse_Id;
     }
 }

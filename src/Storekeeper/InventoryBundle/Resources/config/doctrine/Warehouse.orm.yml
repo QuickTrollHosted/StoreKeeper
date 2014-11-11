@@ -1,7 +1,7 @@
-Storekeeper\InventoryBundle\Entity\Inventory\Category:
+Storekeeper\InventoryBundle\Entity\Warehouse:
     type: entity
     table: null
-    repositoryClass: Storekeeper\InventoryBundle\Entity\Inventory\CategoryRepository
+    repositoryClass: Storekeeper\InventoryBundle\Entity\WarehouseRepository
     id:
         id:
             type: integer
@@ -9,15 +9,16 @@ Storekeeper\InventoryBundle\Entity\Inventory\Category:
             generator:
                 strategy: AUTO
     fields:
-        categoryId:
+        contact_Id:
             type: integer
-            column: category_id
+            column: contact_Id
         name:
             type: string
-            length: '63'
+            length: 255
         description:
             type: string
             length: 255
-        hasPicture:
-            type: boolean
+        gps:
+            type: string
+            length: 255
     lifecycleCallbacks: {  }

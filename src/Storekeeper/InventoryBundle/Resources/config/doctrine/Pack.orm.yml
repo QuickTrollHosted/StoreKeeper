@@ -1,7 +1,7 @@
-Storekeeper\InventoryBundle\Entity\Inventory\Part:
+Storekeeper\InventoryBundle\Entity\Pack:
     type: entity
     table: null
-    repositoryClass: Storekeeper\InventoryBundle\Entity\Inventory\PartRepository
+    repositoryClass: Storekeeper\InventoryBundle\Entity\PackRepository
     id:
         id:
             type: integer
@@ -9,17 +9,6 @@ Storekeeper\InventoryBundle\Entity\Inventory\Part:
             generator:
                 strategy: AUTO
     fields:
-        partId:
-            type: integer
-            column: part_id
-        isChildIndivisible:
-            type: boolean
-        warehouse_Id:
-            type: integer
-            column: warehouse_Id
-        categoryId:
-            type: integer
-            column: category_id
         barecode:
             type: string
             length: '127'

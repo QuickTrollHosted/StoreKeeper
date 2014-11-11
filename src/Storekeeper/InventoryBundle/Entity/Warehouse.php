@@ -1,23 +1,33 @@
 <?php
 
-namespace Storekeeper\InventoryBundle\Entity\Inventory;
+namespace Storekeeper\InventoryBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Category
+ * Warehouse
  */
-class Category
+class Warehouse
 {
     /**
      * @var integer
      */
     private $id;
 
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
     /**
      * @var integer
      */
-    private $categoryId;
+    private $contact_Id;
 
     /**
      * @var string
@@ -30,49 +40,39 @@ class Category
     private $description;
 
     /**
-     * @var boolean
+     * @var string
      */
-    private $hasPicture;
+    private $gps;
 
 
     /**
-     * Get id
+     * Set contact_Id
      *
-     * @return integer 
+     * @param integer $contactId
+     * @return Warehouse
      */
-    public function getId()
+    public function setContactId($contactId)
     {
-        return $this->id;
-    }
-
-    /**
-     * Set categoryId
-     *
-     * @param integer $categoryId
-     * @return Category
-     */
-    public function setCategoryId($categoryId)
-    {
-        $this->categoryId = $categoryId;
+        $this->contact_Id = $contactId;
 
         return $this;
     }
 
     /**
-     * Get categoryId
+     * Get contact_Id
      *
      * @return integer 
      */
-    public function getCategoryId()
+    public function getContactId()
     {
-        return $this->categoryId;
+        return $this->contact_Id;
     }
 
     /**
      * Set name
      *
      * @param string $name
-     * @return Category
+     * @return Warehouse
      */
     public function setName($name)
     {
@@ -95,7 +95,7 @@ class Category
      * Set description
      *
      * @param string $description
-     * @return Category
+     * @return Warehouse
      */
     public function setDescription($description)
     {
@@ -115,25 +115,25 @@ class Category
     }
 
     /**
-     * Set hasPicture
+     * Set gps
      *
-     * @param boolean $hasPicture
-     * @return Category
+     * @param string $gps
+     * @return Warehouse
      */
-    public function setHasPicture($hasPicture)
+    public function setGps($gps)
     {
-        $this->hasPicture = $hasPicture;
+        $this->gps = $gps;
 
         return $this;
     }
 
     /**
-     * Get hasPicture
+     * Get gps
      *
-     * @return boolean 
+     * @return string 
      */
-    public function getHasPicture()
+    public function getGps()
     {
-        return $this->hasPicture;
+        return $this->gps;
     }
 }

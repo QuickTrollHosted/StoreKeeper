@@ -1,6 +1,6 @@
 <?php
 
-namespace Storekeeper\InventoryBundle\Entity\Inventory;
+namespace Storekeeper\InventoryBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -14,6 +14,16 @@ class User
      */
     private $id;
 
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
     /**
      * @var string
      */
@@ -44,16 +54,6 @@ class User
      */
     private $mail;
 
-
-    /**
-     * Get id
-     *
-     * @return integer 
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
 
     /**
      * Set login

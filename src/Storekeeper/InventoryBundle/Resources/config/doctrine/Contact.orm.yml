@@ -1,7 +1,7 @@
-Storekeeper\InventoryBundle\Entity\Inventory\Contact:
+Storekeeper\InventoryBundle\Entity\Contact:
     type: entity
     table: null
-    repositoryClass: Storekeeper\InventoryBundle\Entity\Inventory\ContactRepository
+    repositoryClass: Storekeeper\InventoryBundle\Entity\ContactRepository
     id:
         id:
             type: integer

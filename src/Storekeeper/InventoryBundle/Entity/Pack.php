@@ -1,18 +1,33 @@
 <?php
 
-namespace Storekeeper\InventoryBundle\Entity\Inventory;
+namespace Storekeeper\InventoryBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Warehouse
+ * Pack
  */
-class Warehouse
+class Pack
 {
     /**
      * @var integer
      */
     private $id;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+    /**
+     * @var string
+     */
+    private $barecode;
 
     /**
      * @var string
@@ -25,26 +40,39 @@ class Warehouse
     private $description;
 
     /**
-     * @var string
+     * @var boolean
      */
-    private $gps;
+    private $hasPicture;
 
 
     /**
-     * Get id
+     * Set barecode
      *
-     * @return integer 
+     * @param string $barecode
+     * @return Pack
      */
-    public function getId()
+    public function setBarecode($barecode)
     {
-        return $this->id;
+        $this->barecode = $barecode;
+
+        return $this;
+    }
+
+    /**
+     * Get barecode
+     *
+     * @return string 
+     */
+    public function getBarecode()
+    {
+        return $this->barecode;
     }
 
     /**
      * Set name
      *
      * @param string $name
-     * @return Warehouse
+     * @return Pack
      */
     public function setName($name)
     {
@@ -67,7 +95,7 @@ class Warehouse
      * Set description
      *
      * @param string $description
-     * @return Warehouse
+     * @return Pack
      */
     public function setDescription($description)
     {
@@ -87,53 +115,25 @@ class Warehouse
     }
 
     /**
-     * Set gps
+     * Set hasPicture
      *
-     * @param string $gps
-     * @return Warehouse
+     * @param boolean $hasPicture
+     * @return Pack
      */
-    public function setGps($gps)
+    public function setHasPicture($hasPicture)
     {
-        $this->gps = $gps;
+        $this->hasPicture = $hasPicture;
 
         return $this;
     }
 
     /**
-     * Get gps
+     * Get hasPicture
      *
-     * @return string 
+     * @return boolean 
      */
-    public function getGps()
+    public function getHasPicture()
     {
-        return $this->gps;
-    }
-    /**
-     * @var integer
-     */
-    private $contact_Id;
-
-
-    /**
-     * Set contact_Id
-     *
-     * @param integer $contactId
-     * @return Warehouse
-     */
-    public function setContactId($contactId)
-    {
-        $this->contact_Id = $contactId;
-
-        return $this;
-    }
-
-    /**
-     * Get contact_Id
-     *
-     * @return integer 
-     */
-    public function getContactId()
-    {
-        return $this->contact_Id;
+        return $this->hasPicture;
     }
 }

@@ -1,23 +1,33 @@
 <?php
 
-namespace Storekeeper\InventoryBundle\Entity\Inventory;
+namespace Storekeeper\InventoryBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Pack
+ * Classification
  */
-class Pack
+class Classification
 {
     /**
      * @var integer
      */
     private $id;
 
+
     /**
-     * @var string
+     * Get id
+     *
+     * @return integer 
      */
-    private $barecode;
+    public function getId()
+    {
+        return $this->id;
+    }
+    /**
+     * @var integer
+     */
+    private $classId;
 
     /**
      * @var string
@@ -34,45 +44,40 @@ class Pack
      */
     private $hasPicture;
 
+    /**
+     * @var string
+     */
+    private $type;
+
 
     /**
-     * Get id
+     * Set classId
      *
-     * @return integer 
+     * @param integer $classId
+     * @return Classification
      */
-    public function getId()
+    public function setClassId($classId)
     {
-        return $this->id;
-    }
-
-    /**
-     * Set barecode
-     *
-     * @param string $barecode
-     * @return Pack
-     */
-    public function setBarecode($barecode)
-    {
-        $this->barecode = $barecode;
+        $this->classId = $classId;
 
         return $this;
     }
 
     /**
-     * Get barecode
+     * Get classId
      *
-     * @return string 
+     * @return integer 
      */
-    public function getBarecode()
+    public function getClassId()
     {
-        return $this->barecode;
+        return $this->classId;
     }
 
     /**
      * Set name
      *
      * @param string $name
-     * @return Pack
+     * @return Classification
      */
     public function setName($name)
     {
@@ -95,7 +100,7 @@ class Pack
      * Set description
      *
      * @param string $description
-     * @return Pack
+     * @return Classification
      */
     public function setDescription($description)
     {
@@ -118,7 +123,7 @@ class Pack
      * Set hasPicture
      *
      * @param boolean $hasPicture
-     * @return Pack
+     * @return Classification
      */
     public function setHasPicture($hasPicture)
     {
@@ -135,5 +140,28 @@ class Pack
     public function getHasPicture()
     {
         return $this->hasPicture;
+    }
+
+    /**
+     * Set type
+     *
+     * @param string $type
+     * @return Classification
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return string 
+     */
+    public function getType()
+    {
+        return $this->type;
     }
 }

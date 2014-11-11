@@ -1,7 +1,7 @@
-Storekeeper\InventoryBundle\Entity\Inventory\Pack:
+Storekeeper\InventoryBundle\Entity\Category:
     type: entity
     table: null
-    repositoryClass: Storekeeper\InventoryBundle\Entity\Inventory\PackRepository
+    repositoryClass: Storekeeper\InventoryBundle\Entity\CategoryRepository
     id:
         id:
             type: integer
@@ -9,9 +9,9 @@ Storekeeper\InventoryBundle\Entity\Inventory\Pack:
             generator:
                 strategy: AUTO
     fields:
-        barecode:
-            type: string
-            length: '127'
+        categoryId:
+            type: integer
+            column: category_id
         name:
             type: string
             length: '63'

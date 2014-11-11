@@ -1,11 +1,11 @@
 <?php
 
-namespace Storekeeper\InventoryBundle\Entity\Inventory;
+namespace Storekeeper\InventoryBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * contact
+ * Contact
  */
 class Contact
 {
@@ -14,6 +14,16 @@ class Contact
      */
     private $id;
 
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
     /**
      * @var string
      */
@@ -89,22 +99,17 @@ class Contact
      */
     private $state;
 
-
     /**
-     * Get id
-     *
-     * @return integer 
+     * @var string
      */
-    public function getId()
-    {
-        return $this->id;
-    }
+    private $country;
+
 
     /**
      * Set company
      *
      * @param string $company
-     * @return contact
+     * @return Contact
      */
     public function setCompany($company)
     {
@@ -127,7 +132,7 @@ class Contact
      * Set service
      *
      * @param string $service
-     * @return contact
+     * @return Contact
      */
     public function setService($service)
     {
@@ -150,7 +155,7 @@ class Contact
      * Set title
      *
      * @param string $title
-     * @return contact
+     * @return Contact
      */
     public function setTitle($title)
     {
@@ -173,7 +178,7 @@ class Contact
      * Set firstname
      *
      * @param string $firstname
-     * @return contact
+     * @return Contact
      */
     public function setFirstname($firstname)
     {
@@ -196,7 +201,7 @@ class Contact
      * Set lastname
      *
      * @param string $lastname
-     * @return contact
+     * @return Contact
      */
     public function setLastname($lastname)
     {
@@ -219,7 +224,7 @@ class Contact
      * Set phone
      *
      * @param string $phone
-     * @return contact
+     * @return Contact
      */
     public function setPhone($phone)
     {
@@ -242,7 +247,7 @@ class Contact
      * Set mobile
      *
      * @param string $mobile
-     * @return contact
+     * @return Contact
      */
     public function setMobile($mobile)
     {
@@ -265,7 +270,7 @@ class Contact
      * Set standard
      *
      * @param string $standard
-     * @return contact
+     * @return Contact
      */
     public function setStandard($standard)
     {
@@ -288,7 +293,7 @@ class Contact
      * Set fax
      *
      * @param string $fax
-     * @return contact
+     * @return Contact
      */
     public function setFax($fax)
     {
@@ -311,7 +316,7 @@ class Contact
      * Set mail
      *
      * @param string $mail
-     * @return contact
+     * @return Contact
      */
     public function setMail($mail)
     {
@@ -334,7 +339,7 @@ class Contact
      * Set address1
      *
      * @param string $address1
-     * @return contact
+     * @return Contact
      */
     public function setAddress1($address1)
     {
@@ -357,7 +362,7 @@ class Contact
      * Set address2
      *
      * @param string $address2
-     * @return contact
+     * @return Contact
      */
     public function setAddress2($address2)
     {
@@ -380,7 +385,7 @@ class Contact
      * Set postcode
      *
      * @param string $postcode
-     * @return contact
+     * @return Contact
      */
     public function setPostcode($postcode)
     {
@@ -403,7 +408,7 @@ class Contact
      * Set city
      *
      * @param string $city
-     * @return contact
+     * @return Contact
      */
     public function setCity($city)
     {
@@ -426,7 +431,7 @@ class Contact
      * Set state
      *
      * @param string $state
-     * @return contact
+     * @return Contact
      */
     public function setState($state)
     {
@@ -444,17 +449,12 @@ class Contact
     {
         return $this->state;
     }
-    /**
-     * @var string
-     */
-    private $country;
-
 
     /**
      * Set country
      *
      * @param string $country
-     * @return contact
+     * @return Contact
      */
     public function setCountry($country)
     {
