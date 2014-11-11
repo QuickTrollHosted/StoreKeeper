@@ -12,22 +12,27 @@ Prerequires :
 
 
 Installing dependancings
--------------------------
+---
 - Open CLI and go to the folder StoreKeeper
 - Run "composer install" and answer to questions (or replace "composer install" with good paths by "c:\php\php.exe c:\Composer.phar install")
 
 Creating database and populate, run
-------------------------------------
-$ php app/console doctrine:generate:entities Storekeeper
-$ php app/console doctrine:database:create
-$ php app/console doctrine:schema:update --force
-$ php app/console doctrine:fixtures:load -n
-
+---
+```bash
+php app/console doctrine:generate:entities Storekeeper
+php app/console doctrine:database:create
+php app/console doctrine:schema:update --force
+php app/console doctrine:fixtures:load -n
+```
 
 Note for developpers:
 
 - Generate class for doctrine (this is not a replace of class but adding missing fields)
-$ php app/console doctrine:generate:entities StorekeeperInventoryBundle:Inventory\Part
+```
+php app/console doctrine:generate:entities StorekeeperInventoryBundle:Inventory\Part
+```
 
 - Drop database:
-$ php app/console doctrine:database:drop --force
+```
+php app/console doctrine:database:drop --force
+```
