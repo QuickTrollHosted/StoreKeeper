@@ -1,0 +1,15 @@
+Storekeeper\InventoryBundle\Entity\Inventory\Checkin:
+    type: entity
+    table: null
+    repositoryClass: Storekeeper\InventoryBundle\Entity\Inventory\CheckinRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        userId:
+            type: integer
+            column: user_id
+    lifecycleCallbacks: {  }

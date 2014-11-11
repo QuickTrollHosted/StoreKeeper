@@ -1,0 +1,30 @@
+Storekeeper\InventoryBundle\Entity\Inventory\User:
+    type: entity
+    table: null
+    repositoryClass: Storekeeper\InventoryBundle\Entity\Inventory\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        login:
+            type: string
+            length: '63'
+        password:
+            type: string
+            length: 255
+        auth:
+            type: string
+            length: '15'
+        firstname:
+            type: string
+            length: '63'
+        lastname:
+            type: string
+            length: '63'
+        mail:
+            type: string
+            length: '63'
+    lifecycleCallbacks: {  }

@@ -1,0 +1,4 @@
+storekeeper_inventory:
+    resource: "@StorekeeperInventoryBundle/Resources/config/routing.yml"
+    prefix:   /
+

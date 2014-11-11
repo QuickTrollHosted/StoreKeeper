@@ -1,0 +1,60 @@
+Storekeeper\InventoryBundle\Entity\Inventory\Contact:
+    type: entity
+    table: null
+    repositoryClass: Storekeeper\InventoryBundle\Entity\Inventory\ContactRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        company:
+            type: string
+            length: 63
+        service:
+            type: string
+            length: 63
+        title:
+            type: string
+            length: 7
+        firstname:
+            type: string
+            length: 31
+        lastname:
+            type: string
+            length: 31
+        phone:
+            type: string
+            length: 31
+        mobile:
+            type: string
+            length: 31
+        standard:
+            type: string
+            length: 31
+        fax:
+            type: string
+            length: 31
+        mail:
+            type: string
+            length: 255
+        address1:
+            type: string
+            length: 255
+        address2:
+            type: string
+            length: 127
+        postcode:
+            type: string
+            length: 6
+        city:
+            type: string
+            length: 63
+        state:
+            type: string
+            length: 63
+        country:
+            type: string
+            length: 63
+    lifecycleCallbacks: {  }

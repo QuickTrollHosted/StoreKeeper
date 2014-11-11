@@ -1,0 +1,23 @@
+Storekeeper\InventoryBundle\Entity\Inventory\Pack:
+    type: entity
+    table: null
+    repositoryClass: Storekeeper\InventoryBundle\Entity\Inventory\PackRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        barecode:
+            type: string
+            length: '127'
+        name:
+            type: string
+            length: '63'
+        description:
+            type: string
+            length: 255
+        hasPicture:
+            type: boolean
+    lifecycleCallbacks: {  }

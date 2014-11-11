@@ -1,0 +1,23 @@
+Storekeeper\InventoryBundle\Entity\Inventory\Category:
+    type: entity
+    table: null
+    repositoryClass: Storekeeper\InventoryBundle\Entity\Inventory\CategoryRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        categoryId:
+            type: integer
+            column: category_id
+        name:
+            type: string
+            length: '63'
+        description:
+            type: string
+            length: 255
+        hasPicture:
+            type: boolean
+    lifecycleCallbacks: {  }

@@ -1,0 +1,7 @@
+homepage:
+    path:     /
+    defaults: { _controller: StorekeeperInventoryBundle:Default:index }
+
+part_view:
+    path:     /part/view/{name}
+    defaults: { _controller: StorekeeperInventoryBundle:Part:view }

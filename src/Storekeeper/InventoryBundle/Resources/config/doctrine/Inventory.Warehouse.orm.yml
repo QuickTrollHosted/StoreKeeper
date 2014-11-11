@@ -1,0 +1,24 @@
+Storekeeper\InventoryBundle\Entity\Inventory\Warehouse:
+    type: entity
+    table: null
+    repositoryClass: Storekeeper\InventoryBundle\Entity\Inventory\WarehouseRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        contact_Id:
+            type: integer
+            column: contact_Id
+        name:
+            type: string
+            length: 255
+        description:
+            type: string
+            length: 255
+        gps:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
