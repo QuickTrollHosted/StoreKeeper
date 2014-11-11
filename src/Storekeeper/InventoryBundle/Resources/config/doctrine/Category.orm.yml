@@ -12,6 +12,7 @@ Storekeeper\InventoryBundle\Entity\Category:
         categoryId:
             type: integer
             column: category_id
+            nullable: true
         name:
             type: string
             length: '63'

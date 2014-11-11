@@ -12,6 +12,7 @@ Storekeeper\InventoryBundle\Entity\Part:
         partId:
             type: integer
             column: part_id
+            nullable: true
         isChildIndivisible:
             type: boolean
         warehouse_Id:
@@ -23,6 +24,7 @@ Storekeeper\InventoryBundle\Entity\Part:
         barecode:
             type: string
             length: '127'
+            unique: true
         name:
             type: string
             length: '63'
