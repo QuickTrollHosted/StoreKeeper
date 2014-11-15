@@ -28,17 +28,19 @@ class PartController extends Controller
         ->getRepository('StorekeeperInventoryBundle:Part')
         ->findOneById($id);
         
-        $task = new task();
+
+        $form = $this->createFormBuilder($part)
+                ->add('name', 'text')
+                ->add('description', 'text')
+                ->add('barcode', 'text')
+                ->add('save', 'submit')
+                ->getForm(); 
         
-        $form = $this->createForm($task)
-                ->add('task', 'text')
-                ->getForm();
-        
-        $form->handleRequest($request);
         
         $vars = array('id' => $id,
-                    'part'=> $part);
-        return $this->render('StorekeeperInventoryBundle:Part:view.html.twig', $vars);
+                    'part'=> $part,
+                    'form'=> $form->createView());
+        return $this->render('StorekeeperInventoryBundle:Part:edit.html.twig', $vars);
     }
     
 }

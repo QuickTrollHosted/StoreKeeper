@@ -11,10 +11,6 @@
         {% block javascripts %}{% endblock %}
         <h2>{% trans %}Edit part %id%{% endtrans %}</h2>
         <a href="{{ path('homepage') }}">{% trans %}Homepage{% endtrans %}</a>
-        <ul>
-            <li>Nom : {{ part.name }}</li>
-            <li>Description : {{ part.description }}</li>
-            <li>Code Bar : {{ part.barcode }}</li>
-        </ul>
+        {{ form(form) }}
     </body>
 </html>
