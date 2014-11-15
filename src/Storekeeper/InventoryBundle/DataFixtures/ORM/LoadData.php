@@ -56,6 +56,16 @@ class LoadData implements FixtureInterface
         $warehouseDefault->setName('Default warehouse');
         $manager->persist($warehouseDefault);
         
+        $partSample = new Part();
+        $partSample->setBarecode('10001');
+        $partSample->setCategory($categroyRoot);
+        $partSample->setDescription('Cette pièce est pour vos tests');
+        $partSample->setHasPicture(false);
+        $partSample->setIsChildIndivisible(false);
+        $partSample->setName('Pièce de demonstration');
+        $partSample->setWarehouse($warehouseDefault);
+        $manager->persist($partSample);
+        
         $manager->flush();
     }
 }

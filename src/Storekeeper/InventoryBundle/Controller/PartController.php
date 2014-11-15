@@ -11,9 +11,10 @@ class PartController extends Controller
         //Charger l'objet et retourner dans twig
         $part = $this->getDoctrine()
         ->getRepository('StorekeeperInventoryBundle:Part')
-        ->find($id);
+        ->findOneById($id);
         
-        $vars = array('id' => $id);
+        $vars = array('id' => $id,
+                    'part'=> $part);
         return $this->render('StorekeeperInventoryBundle:Part:view.html.twig', $vars);
     }
 }

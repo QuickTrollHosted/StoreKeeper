@@ -11,12 +11,6 @@ Storekeeper\InventoryBundle\Entity\Part:
     fields:
         isChildIndivisible:
             type: boolean
-        warehouse_Id:
-            type: integer
-            column: warehouse_Id
-        categoryId:
-            type: integer
-            column: category_id
         barecode:
             type: string
             length: '127'
@@ -35,5 +29,11 @@ Storekeeper\InventoryBundle\Entity\Part:
             inversedBy: parts
             joinColumn:
                 name: category_id
+                referencedColumnName: id
+        warehouse:
+            targetEntity: Warehouse
+            inversedBy: parts
+            joinColumn:
+                name: warehouse_id
                 referencedColumnName: id
     lifecycleCallbacks: {  }

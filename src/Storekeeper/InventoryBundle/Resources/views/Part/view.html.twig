@@ -11,5 +11,6 @@
         {% block javascripts %}{% endblock %}
         <h2>{% trans %}View part %id%{% endtrans %}</h2>
         <a href="{{ path('homepage') }}">{% trans %}Homepage{% endtrans %}</a>
+        {{ dump(part) }}
     </body>
 </html>

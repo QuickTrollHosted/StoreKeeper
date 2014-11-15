@@ -36,11 +36,6 @@ class Part
     private $warehouse_Id;
 
     /**
-     * @var integer
-     */
-    private $categoryId;
-
-    /**
      * @var string
      */
     private $barecode;
@@ -229,6 +224,12 @@ class Part
 
 
     /**
+     * @var \Storekeeper\InventoryBundle\Entity\Warehouse
+     */
+    private $warehouse;
+
+
+    /**
      * Set category
      *
      * @param \Storekeeper\InventoryBundle\Entity\Category $category
@@ -249,5 +250,28 @@ class Part
     public function getCategory()
     {
         return $this->category;
+    }
+
+    /**
+     * Set warehouse
+     *
+     * @param \Storekeeper\InventoryBundle\Entity\Warehouse $warehouse
+     * @return Part
+     */
+    public function setWarehouse(\Storekeeper\InventoryBundle\Entity\Warehouse $warehouse = null)
+    {
+        $this->warehouse = $warehouse;
+
+        return $this;
+    }
+
+    /**
+     * Get warehouse
+     *
+     * @return \Storekeeper\InventoryBundle\Entity\Warehouse 
+     */
+    public function getWarehouse()
+    {
+        return $this->warehouse;
     }
 }
