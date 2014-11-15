@@ -38,11 +38,6 @@ class Part
     /**
      * @var string
      */
-    private $barecode;
-
-    /**
-     * @var string
-     */
     private $name;
 
     /**
@@ -125,29 +120,7 @@ class Part
         return $this->categoryId;
     }
 
-    /**
-     * Set barecode
-     *
-     * @param string $barecode
-     * @return Part
-     */
-    public function setBarecode($barecode)
-    {
-        $this->barecode = $barecode;
-
-        return $this;
-    }
-
-    /**
-     * Get barecode
-     *
-     * @return string 
-     */
-    public function getBarecode()
-    {
-        return $this->barecode;
-    }
-
+ 
     /**
      * Set name
      *
@@ -273,5 +246,33 @@ class Part
     public function getWarehouse()
     {
         return $this->warehouse;
+    }
+    /**
+     * @var string
+     */
+    private $barcode;
+
+
+    /**
+     * Set barcode
+     *
+     * @param string $barcode
+     * @return Part
+     */
+    public function setBarcode($barcode)
+    {
+        $this->barcode = $barcode;
+
+        return $this;
+    }
+
+    /**
+     * Get barcode
+     *
+     * @return string 
+     */
+    public function getBarcode()
+    {
+        return $this->barcode;
     }
 }

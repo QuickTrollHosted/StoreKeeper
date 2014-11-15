@@ -24,10 +24,6 @@ class Pack
     {
         return $this->id;
     }
-    /**
-     * @var string
-     */
-    private $barecode;
 
     /**
      * @var string
@@ -43,30 +39,6 @@ class Pack
      * @var boolean
      */
     private $hasPicture;
-
-
-    /**
-     * Set barecode
-     *
-     * @param string $barecode
-     * @return Pack
-     */
-    public function setBarecode($barecode)
-    {
-        $this->barecode = $barecode;
-
-        return $this;
-    }
-
-    /**
-     * Get barecode
-     *
-     * @return string 
-     */
-    public function getBarecode()
-    {
-        return $this->barecode;
-    }
 
     /**
      * Set name
@@ -135,5 +107,33 @@ class Pack
     public function getHasPicture()
     {
         return $this->hasPicture;
+    }
+    /**
+     * @var string
+     */
+    private $barcode;
+
+
+    /**
+     * Set barcode
+     *
+     * @param string $barcode
+     * @return Pack
+     */
+    public function setBarcode($barcode)
+    {
+        $this->barcode = $barcode;
+
+        return $this;
+    }
+
+    /**
+     * Get barcode
+     *
+     * @return string 
+     */
+    public function getBarcode()
+    {
+        return $this->barcode;
     }
 }

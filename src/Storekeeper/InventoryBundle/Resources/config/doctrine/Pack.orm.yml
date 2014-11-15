@@ -9,7 +9,7 @@ Storekeeper\InventoryBundle\Entity\Pack:
             generator:
                 strategy: AUTO
     fields:
-        barecode:
+        barcode:
             type: string
             length: '127'
         name:

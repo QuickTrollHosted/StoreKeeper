@@ -11,7 +11,7 @@ Storekeeper\InventoryBundle\Entity\Part:
     fields:
         isChildIndivisible:
             type: boolean
-        barecode:
+        barcode:
             type: string
             length: '127'
             unique: true

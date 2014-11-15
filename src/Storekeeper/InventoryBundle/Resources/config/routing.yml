@@ -5,3 +5,7 @@ homepage:
 part_view:
     path:     /part/view/{id}
     defaults: { _controller: StorekeeperInventoryBundle:Part:view }
+
+part_edit:
+    path:     /part/edit/{id}
+    defaults: { _controller: StorekeeperInventoryBundle:Part:edit }

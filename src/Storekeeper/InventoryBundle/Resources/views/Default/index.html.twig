@@ -11,7 +11,8 @@
         {% block javascripts %}{% endblock %}
         {% trans %}Hello{% endtrans %} {{ name }}
         <ul>
-            <li><a href="">View part 1</a></li>
+            <li><a href="{{ path('part_view', {'id':part.id}) }}">View exemple part 1</a></li>
+            <li><a href="{{ path('part_edit', {'id':part.id}) }}">Edit exemple part 1</a></li>
         </ul>
             
     </body>
