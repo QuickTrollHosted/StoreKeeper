@@ -24,6 +24,16 @@ class Classification
     {
         return $this->id;
     }
+    
+    /**
+     * Convert name object to string
+     * 
+     * @return string
+     */
+    public function __toString(){
+        return (string)$this->id;
+    }
+    
     /**
      * @var integer
      */

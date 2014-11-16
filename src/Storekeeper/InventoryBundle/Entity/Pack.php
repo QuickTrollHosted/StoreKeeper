@@ -26,10 +26,14 @@ class Pack
     }
 
     /**
-     * @var string
+     * Convert name object to string
+     * 
+     * @return string
      */
-    private $name;
-
+    public function __toString(){
+        return (string)$this->id;
+    }
+    
     /**
      * @var string
      */

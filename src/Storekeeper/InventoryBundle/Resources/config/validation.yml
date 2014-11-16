@@ -1,0 +1,9 @@
+Storekeeper\Inventory\Entity\Part:
+    Properties:
+        barcode:
+            - Lenght:
+                min: 6
+                max: 8
+                
+
+                

@@ -2,8 +2,10 @@
 
 namespace Storekeeper\InventoryBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Storekeeper\InventoryBundle\Entity\Part;
+use Storekeeper\InventoryBundle\Form\PartType;
 
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
 class PartController extends Controller
@@ -31,13 +33,18 @@ class PartController extends Controller
         ->findOneById($id);
         
         //Creation du formulaire
-        $form = $this->createFormBuilder($part)
+        //$form = $this->createFormBuilder($part)
+        /*
+        $form = $this->get('form.factory')->createBuilder('form', $part)
                 ->setAction($this->generateUrl('part_edit', array('id'=>1)))
                 ->add('name', null, array('max_length' => 255 ))
                 ->add('description', null, array('max_length' => 255 ))
                 ->add('barcode', null, array('max_length' => 13 ))
                 ->add('save', 'submit')
                 ->getForm(); 
+        */
+        
+        $form = $this->get('form.factory')->create(new PartType, $part);
         
         $validator = $this->get('validator');
         $errorList = $validator->validate($part);

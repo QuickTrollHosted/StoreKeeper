@@ -3,16 +3,21 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+            <link href="{{ asset('/bundles/storekeeperinventory/css/bootstrap.min.css') }}" type="text/css" rel="stylesheet" />
+            <link href="{{ asset('/bundles/storekeeperinventory/css/bootstrap-theme.min.css') }}" type="text/css" rel="stylesheet" />
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+        <script src="{{ asset('/bundles/storekeeperinventory/js/bootstrap.min.js') }}" type="text/javascript"></script>
+        {% endblock %}
         {% trans %}Hello{% endtrans %} {{ name }}
         <ul>
-            <li><a href="{{ path('part_view', {'id':part.id}) }}">View exemple part 1</a></li>
-            <li><a href="{{ path('part_edit', {'id':part.id}) }}">Edit exemple part 1</a></li>
+            <li><a href="{{ path('part_view', {'id':part.id}) }}" class="btn btn-primary">View exemple part 1</a></li>
+            <li><a href="{{ path('part_edit', {'id':part.id}) }}" class="btn btn-primary">Edit exemple part 1</a></li>
         </ul>
             
     </body>
