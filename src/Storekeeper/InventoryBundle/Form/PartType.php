@@ -22,7 +22,6 @@ class PartType extends AbstractType
             ->add('hasPicture')
             ->add('category')
             ->add('warehouse')
-            ->add('save', 'submit')
         ;
     }
     

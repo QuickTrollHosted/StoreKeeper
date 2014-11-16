@@ -32,22 +32,11 @@ class PartController extends Controller
         ->getRepository('StorekeeperInventoryBundle:Part')
         ->findOneById($id);
         
-        //Creation du formulaire
-        //$form = $this->createFormBuilder($part)
-        /*
-        $form = $this->get('form.factory')->createBuilder('form', $part)
-                ->setAction($this->generateUrl('part_edit', array('id'=>1)))
-                ->add('name', null, array('max_length' => 255 ))
-                ->add('description', null, array('max_length' => 255 ))
-                ->add('barcode', null, array('max_length' => 13 ))
-                ->add('save', 'submit')
-                ->getForm(); 
-        */
+        $form = $this->createForm(new PartType, $part);
+        $form->add('save', 'submit');
         
-        $form = $this->get('form.factory')->create(new PartType, $part);
-        
-        $validator = $this->get('validator');
-        $errorList = $validator->validate($part);
+        //$validator = $this->get('validator');
+        //$errorList = $validator->validate($part);
         
         $form->handleRequest($request);
 

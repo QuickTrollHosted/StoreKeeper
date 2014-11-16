@@ -140,4 +140,10 @@ class Pack
     {
         return $this->barcode;
     }
+    /**
+     * @var string
+     */
+    private $name;
+
+
 }

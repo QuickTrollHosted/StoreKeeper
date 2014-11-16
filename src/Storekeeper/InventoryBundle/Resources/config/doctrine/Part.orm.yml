@@ -23,6 +23,10 @@ Storekeeper\InventoryBundle\Entity\Part:
             length: 255
         hasPicture:
             type: boolean
+            isNullable: true
+            options:
+                default: 1
+                comment: 'A picture for this part exists'
     manyToOne:
         category:
             targetEntity: Category

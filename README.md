@@ -26,6 +26,11 @@ php app/console doctrine:schema:update --force
 php app/console doctrine:fixtures:load -n
 ```
 
+Copy statics assets from bundle to web folder
+```
+php app/console assets:install
+```
+
 Note for developpers:
 ---
 
@@ -37,4 +42,9 @@ php app/console doctrine:generate:entities StorekeeperInventoryBundle:Inventory\
 - Drop database:
 ```
 php app/console doctrine:database:drop --force
+```
+
+- Generate form file:
+```
+php app/console generate:doctrine:form StorekeeperInventoryBundle:Part
 ```

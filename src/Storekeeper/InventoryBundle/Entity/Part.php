@@ -49,12 +49,7 @@ class Part
      */
     private $description;
 
-    /**
-     * @var boolean
-     */
-    private $hasPicture;
-
-
+ 
     /**
      * Set isChildIndivisible
      *
@@ -171,28 +166,6 @@ class Part
         return $this->description;
     }
 
-    /**
-     * Set hasPicture
-     *
-     * @param boolean $hasPicture
-     * @return Part
-     */
-    public function setHasPicture($hasPicture)
-    {
-        $this->hasPicture = $hasPicture;
-
-        return $this;
-    }
-
-    /**
-     * Get hasPicture
-     *
-     * @return boolean 
-     */
-    public function getHasPicture()
-    {
-        return $this->hasPicture;
-    }
  
     /**
      * @var \Storekeeper\InventoryBundle\Entity\Category
@@ -278,5 +251,33 @@ class Part
     public function getBarcode()
     {
         return $this->barcode;
+    }
+    /**
+     * @var boolean
+     */
+    private $hasPicture;
+
+
+    /**
+     * Set hasPicture
+     *
+     * @param boolean $hasPicture
+     * @return Part
+     */
+    public function setHasPicture($hasPicture)
+    {
+        $this->hasPicture = $hasPicture;
+
+        return $this;
+    }
+
+    /**
+     * Get hasPicture
+     *
+     * @return boolean 
+     */
+    public function getHasPicture()
+    {
+        return $this->hasPicture;
     }
 }
