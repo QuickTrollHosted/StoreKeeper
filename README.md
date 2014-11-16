@@ -1,7 +1,23 @@
 StoreKeeper
 ===========
 
-Inventory management with loans
+About
+---
+Inventory management with check-in and check-out.
+This software is Web based for simplify and have the rigor in manage assets.
+- Full inventory with additionnals informations (financial, vendor, technical...)
+- Management on kiosk tablette or barcode scanner for simplify actions
+- Reservation assets by users, conflicts management
+- History of all movements
+- Alert for missings check-in or fixing assets life (power charge, waranty, check...)
+
+
+Version
+---
+No version available. This is a build not fully functionnal !
+This dev branch is auto publish on push (and reset) here : http://storekeeper.qth.fr
+Please come back feb/apr 2015 for a first release.
+
 
 Prerequires
 ---
@@ -17,6 +33,7 @@ Installing dependancings
 - Open CLI and go to the folder StoreKeeper
 - Run "composer install" and answer to questions (or replace "composer install" with good paths by "c:\php\php.exe c:\Composer.phar install")
 
+
 Creating database and populate, run
 ---
 ```bash
@@ -26,10 +43,13 @@ php app/console doctrine:schema:update --force
 php app/console doctrine:fixtures:load -n
 ```
 
+
 Copy statics assets from bundle to web folder
+---
 ```
 php app/console assets:install
 ```
+
 
 Note for developpers:
 ---
