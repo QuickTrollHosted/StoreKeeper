@@ -55,4 +55,16 @@ class PartController extends Controller
                     'form'=> $form->createView()));
     }
     
+    
+    
+    public function newAction(Request $request)
+    {
+        
+    }
+    
+    public function searchAction($id)
+    {
+        
+    }
+    
 }

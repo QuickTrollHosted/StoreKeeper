@@ -9,3 +9,12 @@ part_view:
 part_edit:
     path:     /part/edit/{id}
     defaults: { _controller: StorekeeperInventoryBundle:Part:edit }
+    
+    
+part_new:
+    path:     /part/new
+    defaults: { _controller: StorekeeperInventoryBundle:Part:new }
+    
+part_stats:
+    path:     /part/stats
+    defaults: { _controller: StorekeeperInventoryBundle:Part:stats }
