@@ -68,3 +68,8 @@ php app/console doctrine:database:drop --force
 ```
 php app/console generate:doctrine:form StorekeeperInventoryBundle:Part
 ```
+
+- Clear cache
+```
+php app/console cache:clear --env=prod
+```

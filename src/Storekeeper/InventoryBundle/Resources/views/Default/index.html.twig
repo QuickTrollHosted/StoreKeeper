@@ -3,7 +3,7 @@
 {% block body %}
         <h1>{% trans %}Welcome ! Please select a action.{% endtrans %}</h1>
 
-        <p><a href="{{ path('part_new') }}" class="btn btn-primary">Add a new part</a><a href="{{ path('part_stats') }}" class="btn btn-primary">View part statistics</a></p>
+        <p><a href="{{ path('part_new') }}" class="btn btn-primary">{% trans %}Add a new part{% endtrans %}</a><a href="{{ path('part_stats') }}" class="btn btn-primary">{% trans %}View part statistics{% endtrans %}</a></p>
         
-        <p><a href="{{ path('part_view', {'id':part.id}) }}" class="btn btn-primary">View exemple part 1</a><a href="{{ path('part_edit', {'id':part.id}) }}" class="btn btn-primary">Edit exemple part 1</a></p>
+        <p><a href="{{ path('part_view', {'id':part.id}) }}" class="btn btn-primary">{% trans %}View exemple part 1{% endtrans %}</a><a href="{{ path('part_edit', {'id':part.id}) }}" class="btn btn-primary">{% trans %}Edit exemple part 1{% endtrans %}</a></p>
 {% endblock %}

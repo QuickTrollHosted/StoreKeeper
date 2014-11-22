@@ -6,6 +6,12 @@ View part %id%: Visualiser la pièce %id%
 Homepage: Accueil
 Welcome ! Please select a action.: Bienvenue ! Sélectionnez une action.
 Edit part %id%: Editer la pièce %id%
+View part statistics: Consulter les statistiques de pièces
+Add a new part: Ajouter une pièce
+View exemple part 1: Visualiser la pièce 1
+Edit exemple part 1: Modifier la pièce 1
+
+### Part
 Name: Nom
 Barcode: Code-barre
 Name: Nom
