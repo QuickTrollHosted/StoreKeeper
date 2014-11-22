@@ -5,14 +5,13 @@
 {% block body %}
 <h2>{% trans %}Add a new part{% endtrans %}</h2>
 <h3><a href="{{ path('homepage') }}" class="btn btn-primary">{% trans %}Homepage{% endtrans %}</a></h3>
-<h3>Formulaire d'annonce</h3>
 <div class="well">
   {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
     {# Les erreurs générales du formulaire. #}
     {{ form_errors(form) }}
     <div class="form-group">
       {# Génération du label. #}
-      {{ form_label(form.name, "Nom", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+      {{ form_label(form.name, "Name", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
       {# Affichage des erreurs pour ce champ précis. #}
       {{ form_errors(form.name) }}
       <div class="col-sm-4">
@@ -22,7 +21,7 @@
     </div>
     <div class="form-group">
       {# Génération du label. #}
-      {{ form_label(form.barcode, "Code barre", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+      {{ form_label(form.barcode, "Barcode"|trans(), {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
       {# Affichage des erreurs pour ce champ précis. #}
       {{ form_errors(form.barcode) }}
       <div class="col-sm-4">
@@ -32,7 +31,7 @@
     </div>
     {# Idem pour un autre champ. #}
     <div class="form-group">
-      {{ form_label(form.description, "Description", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+      {{ form_label(form.description, "Description"|trans(), {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
       {{ form_errors(form.description) }}
       <div class="col-sm-4">
         {{ form_widget(form.description, {'attr': {'class': 'form-control'}}) }}
@@ -40,7 +39,7 @@
     </div>
     <div class="form-group">
       {# Génération du label. #}
-      {{ form_label(form.isChildIndivisible, "Indisossiable de la pièce parente", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+      {{ form_label(form.isChildIndivisible, "Indivisible part of parent"|trans(), {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
       {# Affichage des erreurs pour ce champ précis. #}
       {{ form_errors(form.isChildIndivisible) }}
       <div class="col-sm-4">
@@ -50,7 +49,7 @@
     </div>
     <div class="form-group">
       {# Génération du label. #}
-      {{ form_label(form.hasPicture, "Image exisitante", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+      {{ form_label(form.hasPicture, "Picture exists"|trans(), {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
       {# Affichage des erreurs pour ce champ précis. #}
       {{ form_errors(form.hasPicture) }}
       <div class="col-sm-4">
@@ -60,7 +59,7 @@
     </div>
     <div class="form-group">
       {# Génération du label. #}
-      {{ form_label(form.category, "Catégorie", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+      {{ form_label(form.category, "Category"|trans(), {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
       {# Affichage des erreurs pour ce champ précis. #}
       {{ form_errors(form.category) }}
       <div class="col-sm-4">
@@ -70,7 +69,7 @@
     </div>
     <div class="form-group">
       {# Génération du label. #}
-      {{ form_label(form.warehouse, "Magasin", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+      {{ form_label(form.warehouse, "Warehouse"|trans(), {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
       {# Affichage des erreurs pour ce champ précis. #}
       {{ form_errors(form.warehouse) }}
       <div class="col-sm-4">
@@ -79,12 +78,9 @@
       </div>
     </div>
   {# Pour le bouton, pas de label ni d'erreur, on affiche juste le widget #}
-  {{ form_widget(form.save, {'attr': {'class': 'btn btn-danger'}}) }}
+  {{ form_widget(form.save, {'label': 'Save'|trans(), 'attr': {'class': 'btn btn-danger'}}) }}
   {# Génération automatique des champs pas encore écrits.
      Dans cet exemple, ce serait le champ CSRF (géré automatiquement par Symfony !)
      et tous les champs cachés (type « hidden »). #}
   {{ form_rest(form) }}
-  
-  {# Fermeture de la balise <form> du formulaire HTML #}
-  {{ form_end(form) }}
 {% endblock %}

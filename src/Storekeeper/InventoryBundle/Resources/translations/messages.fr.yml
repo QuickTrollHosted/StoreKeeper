@@ -5,3 +5,12 @@ Coucou: Bonjour
 View part %id%: Visualiser la pièce %id%
 Homepage: Accueil
 Welcome ! Please select a action.: Bienvenue ! Sélectionnez une action.
+Edit part %id%: Editer la pièce %id%
+Name: Nom
+Barcode: Code-barre
+Name: Nom
+Description: Description
+Category: Catégorie
+Warehouse: Magasin
+Picture exists: Image existante
+Indivisible part of parent: Pièce non séparable de son parent

@@ -39,12 +39,14 @@ Storekeeper\InventoryBundle\Entity\Part:
         category:
             targetEntity: Category
             inversedBy: parts
+            required: true
             joinColumn:
                 name: category_id
                 referencedColumnName: id
         warehouse:
             targetEntity: Warehouse
             inversedBy: parts
+            required: true
             joinColumn:
                 name: warehouse_id
                 referencedColumnName: id

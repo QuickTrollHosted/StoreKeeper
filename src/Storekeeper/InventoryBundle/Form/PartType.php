@@ -20,8 +20,8 @@ class PartType extends AbstractType
             ->add('name')
             ->add('description', null, array('required' => false))
             ->add('hasPicture', null, array('required' => false))
-            ->add('category', null, array('empty_value' => 'Choose a category'))
-            ->add('warehouse', null, array('empty_value' => 'Choose a warehouse'))
+            ->add('category', null, array('empty_value' => 'Choose a category', 'required' => true))
+            ->add('warehouse', null, array('empty_value' => 'Choose a warehouse', 'required' => true))
         ;
     }
     
