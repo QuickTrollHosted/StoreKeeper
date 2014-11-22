@@ -1,24 +1,9 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}
-            <link href="{{ asset('/bundles/storekeeperinventory/css/bootstrap.min.css') }}" type="text/css" rel="stylesheet" />
-            <link href="{{ asset('/bundles/storekeeperinventory/css/bootstrap-theme.min.css') }}" type="text/css" rel="stylesheet" />
-        {% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}
-        <script src="{{ asset('/bundles/storekeeperinventory/js/bootstrap.min.js') }}" type="text/javascript"></script>
-        {% endblock %}
+{% extends 'StorekeeperInventoryBundle:Default:base.html.twig' %}
+{% block title %}Welcome!{% endblock %}
+{% block body %}
         <h1>{% trans %}Welcome ! Please select a action.{% endtrans %}</h1>
 
         <p><a href="{{ path('part_new') }}" class="btn btn-primary">Add a new part</a><a href="{{ path('part_stats') }}" class="btn btn-primary">View part statistics</a></p>
         
         <p><a href="{{ path('part_view', {'id':part.id}) }}" class="btn btn-primary">View exemple part 1</a><a href="{{ path('part_edit', {'id':part.id}) }}" class="btn btn-primary">Edit exemple part 1</a></p>
-            
-    </body>
-</html>
+{% endblock %}

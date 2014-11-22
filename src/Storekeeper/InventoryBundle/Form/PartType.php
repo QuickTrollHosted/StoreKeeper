@@ -15,11 +15,11 @@ class PartType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('isChildIndivisible')
+            ->add('isChildIndivisible', null, array('required' => 'false'))
             ->add('barcode')
             ->add('name')
             ->add('description')
-            ->add('hasPicture')
+            ->add('hasPicture', null, array('required' => 'false'))
             ->add('category')
             ->add('warehouse')
         ;

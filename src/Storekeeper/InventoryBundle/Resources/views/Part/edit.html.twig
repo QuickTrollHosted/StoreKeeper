@@ -1,23 +1,10 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}{% trans %}Edit part %id%{% endtrans %}{% endblock %}</title>
-        {% block stylesheets %}
-            <link href="{{ asset('/bundles/storekeeperinventory/css/bootstrap.min.css') }}" type="text/css" rel="stylesheet" />
-            <link href="{{ asset('/bundles/storekeeperinventory/css/bootstrap-theme.min.css') }}" type="text/css" rel="stylesheet" />
-        {% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}
-        <script src="{{ asset('/bundles/storekeeperinventory/js/bootstrap.min.js') }}" type="text/javascript"></script>
-        {% endblock %}
-        <h2>{% trans %}Edit part %id%{% endtrans %}</h2>
-        <h3><a href="{{ path('homepage') }}" class="btn btn-primary">{% trans %}Homepage{% endtrans %}</a></h3>
+{% extends 'StorekeeperInventoryBundle:Default:base.html.twig' %}
 
-        
+{% block title %}{% trans %}Edit part %id%{% endtrans %}{% endblock %}
+
+{% block body %}
+<h2>{% trans %}Edit part %id%{% endtrans %}</h2>
+<h3><a href="{{ path('homepage') }}" class="btn btn-primary">{% trans %}Homepage{% endtrans %}</a></h3>
 <h3>Formulaire d'annonce</h3>
 <div class="well">
   {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
@@ -100,6 +87,4 @@
   
   {# Fermeture de la balise <form> du formulaire HTML #}
   {{ form_end(form) }}
-</div>
-    </body>
-</html>
+{% endblock %}

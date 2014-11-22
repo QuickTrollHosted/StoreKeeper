@@ -35,9 +35,6 @@ class PartController extends Controller
         $form = $this->createForm(new PartType, $part);
         $form->add('save', 'submit');
         
-        //$validator = $this->get('validator');
-        //$errorList = $validator->validate($part);
-        
         $form->handleRequest($request);
 
         //Traitement de la validation du formulaire
@@ -48,7 +45,6 @@ class PartController extends Controller
             return $this->redirect($this->generateUrl('part_view', array('id'=>$id)));
         }
         
-
         return $this->render('StorekeeperInventoryBundle:Part:edit.html.twig',
                    array('id' => $id,
                     'part'=> $part,
@@ -59,12 +55,39 @@ class PartController extends Controller
     
     public function newAction(Request $request)
     {
+        $part = new Part();
+        $form = $this->createForm(new PartType);
+        $form->add('save', 'submit');
         
+        $form->handleRequest($request);
+
+        //Traitement de la validation du formulaire
+        if ($form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $newPart = $form->getData();
+            $em->persist($newPart);
+            $em->flush();
+            return $this->redirect($this->generateUrl('part_view', array('id'=>$newPart->getId())));
+        }
+        
+        return $this->render('StorekeeperInventoryBundle:Part:new.html.twig',
+                   array('form'=> $form->createView()));
     }
     
     public function searchAction($id)
     {
         
+    }
+    
+    public function statsAction()
+    {
+        //Charge 
+        $parts = $this->getDoctrine()
+        ->getRepository('StorekeeperInventoryBundle:Part')
+        ->findAll();
+
+        $vars = array('stats'=> count($parts));
+        return $this->render('StorekeeperInventoryBundle:Part:stats.html.twig', $vars);
     }
     
 }

@@ -1,25 +1,12 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}{% trans %}View part %id%{% endtrans %}{% endblock %}</title>
-        {% block stylesheets %}
-            <link href="{{ asset('/bundles/storekeeperinventory/css/bootstrap.min.css') }}" type="text/css" rel="stylesheet" />
-            <link href="{{ asset('/bundles/storekeeperinventory/css/bootstrap-theme.min.css') }}" type="text/css" rel="stylesheet" />
-        {% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}
-        <script src="{{ asset('/bundles/storekeeperinventory/js/bootstrap.min.js') }}" type="text/javascript"></script>
-        {% endblock %}
-        <h2>{% trans %}View part %id%{% endtrans %}</h2>
-        <a href="{{ path('homepage') }}" class="btn btn-primary">{% trans %}Homepage{% endtrans %}</a>
-        <ul>
-            <li>Nom : {{ part.name }}</li>
-            <li>Description : {{ part.description }}</li>
-            <li>Code Bar : {{ part.barcode }}</li>
-        </ul>
-    </body>
-</html>
+{% extends 'StorekeeperInventoryBundle:Default:base.html.twig' %}
+
+{% block title %}{% trans %}View part %id%{% endtrans %}{% endblock %}
+
+{% block body %}
+    <a href="{{ path('homepage') }}" class="btn btn-primary">{% trans %}Homepage{% endtrans %}</a>
+    <ul>
+        <li>Nom : {{ part.name }}</li>
+        <li>Description : {{ part.description }}</li>
+        <li>Code Bar : {{ part.barcode }}</li>
+    </ul>
+{% endblock %}
