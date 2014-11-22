@@ -9,24 +9,32 @@ Storekeeper\InventoryBundle\Entity\Part:
             generator:
                 strategy: AUTO
     fields:
-        isChildIndivisible:
-            type: boolean
         barcode:
             type: string
             length: '127'
             unique: true
+            options:
+                comment: 'Barcode'
         name:
             type: string
             length: '63'
+            options:
+                comment: 'Name of part'
         description:
             type: string
             length: 255
+            nullable: true
+            options:
+                comment: 'Description of part'
         hasPicture:
             type: boolean
-            isNullable: true
             options:
-                default: 1
+                default: 0
                 comment: 'A picture for this part exists'
+        isChildIndivisible:
+            type: boolean
+            options:
+                comment: 'This part is integrated to a parent and can t be separated'
     manyToOne:
         category:
             targetEntity: Category
