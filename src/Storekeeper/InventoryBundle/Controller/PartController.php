@@ -8,6 +8,8 @@ use Storekeeper\InventoryBundle\Form\PartType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
+use Symfony\Component\HttpFoundation\Response;
+
 class PartController extends Controller
 {
     public function viewAction($id)
@@ -61,8 +63,18 @@ class PartController extends Controller
         
         $form->handleRequest($request);
 
+        $validator = $this->get('validator');
+        
         //Traitement de la validation du formulaire
         if ($form->isValid()) {
+            $validator = $this->get('validator');
+            $errorList = $validator->validate($form->getData());
+            
+            if (count($errorList) > 0) {
+                return $this->render('StorekeeperInventoryBundle:Part:new.html.twig',
+                   array('form'=> $form->createView(), 'errorList'=>$errorList));
+            }
+            
             $em = $this->getDoctrine()->getManager();
             $newPart = $form->getData();
             $em->persist($newPart);

@@ -1,9 +1,14 @@
-Storekeeper\Inventory\Entity\Part:
-    Properties:
+Storekeeper\InventoryBundle\Entity\Part:
+    properties:
         barcode:
-            - Lenght:
-                min: 6
-                max: 8
+            - Length:
+                min: 3
+                max: 31
+                minMessage: "Le code-barre doit faire au minimum {{ limit }} caractères"
+                maxMessage: "Le code-barre doit faire au maximum {{ limit }} caractères"
+        name:
+            - NotBlank: ~
+
                 
 
                 
