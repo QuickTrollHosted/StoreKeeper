@@ -16,7 +16,7 @@ Version
 ---
 No version available. This is a build not fully functionnal !
 This dev branch is auto publish on push (and reset) here : http://storekeeper.qth.fr
-Please come back feb/apr 2015 for a first release.
+Please come back middle 2015 for a first release.
 
 
 Prerequires

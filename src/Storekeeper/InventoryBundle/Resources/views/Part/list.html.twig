@@ -1,0 +1,11 @@
+{% extends 'StorekeeperInventoryBundle:Default:base.html.twig' %}
+
+{% block title %}{% trans %}View parts list{% endtrans %}{% endblock %}
+
+{% block body %}
+    <ul>
+        {% for part in parts %}
+            <li><a href="{{ path('part_view', {'id':part.id}) }}">{{ part }}</a> [<a href="{{ path('part_edit', {'id':part.id}) }}">edit</a>]</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -24,6 +24,17 @@ class PartController extends Controller
         return $this->render('StorekeeperInventoryBundle:Part:view.html.twig', $vars);
     }
     
+    public function listAction()
+    {
+        //Charger l'objet et retourner dans twig
+        $parts = $this->getDoctrine()
+        ->getRepository('StorekeeperInventoryBundle:Part')
+        ->findAll();
+        
+        $vars = array('parts'=> $parts);
+        return $this->render('StorekeeperInventoryBundle:Part:list.html.twig', $vars);
+    }
+    
     
     
     

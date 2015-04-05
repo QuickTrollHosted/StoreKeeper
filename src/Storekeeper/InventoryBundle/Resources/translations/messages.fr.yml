@@ -7,9 +7,11 @@ Homepage: Accueil
 Welcome ! Please select a action.: Bienvenue ! Sélectionnez une action.
 Edit part %id%: Editer la pièce %id%
 View part statistics: Consulter les statistiques de pièces
+View parts list: Voir la liste des pièces
 Add a new part: Ajouter une pièce
 View exemple part 1: Visualiser la pièce 1
 Edit exemple part 1: Modifier la pièce 1
+Save: Enregistrer
 
 ### Part
 Name: Nom

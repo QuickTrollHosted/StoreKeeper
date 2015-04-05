@@ -18,3 +18,7 @@ part_new:
 part_stats:
     path:     /part/stats
     defaults: { _controller: StorekeeperInventoryBundle:Part:stats }
+    
+part_list:
+    path:     /part/list
+    defaults: { _controller: StorekeeperInventoryBundle:Part:list }
